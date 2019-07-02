@@ -25,7 +25,6 @@ public class PluvitecApiController {
 	
 	@Autowired
 	private ColetaDao coletaDao;
-	
 
 	@GetMapping("/coletas")
 	public @ResponseBody List<ColetaDto> findAll() {
