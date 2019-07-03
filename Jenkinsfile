@@ -1,9 +1,14 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent any
     stages {
         stage('build') {
             steps {
-                bat 'mvn --version'
+                bat 'mvn install'
+            }
+        },
+        stage('run') {
+            steps {
+                bat 'java -jar target/pluvitec-0.0.1-SNAPSHOT.jar'
             }
         }
     }
