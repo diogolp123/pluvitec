@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'jdkcontainer' } }
+    agent { docker { image '8-jdk' } }
     stages {
         stage('build') {
             steps {
