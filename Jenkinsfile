@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh '$ java -jar pluvitec-0.0.1-SNAPSHOT.jar'
+                bat 'java -jar pluvitec-0.0.1-SNAPSHOT.jar'
             }
         }
     }
